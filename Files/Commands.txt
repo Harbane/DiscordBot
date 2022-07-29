@@ -1,0 +1,12 @@
+```
+.help
+.hello
+.quote 
+.cum 
+.moan
+.gay [Name]
+.kill [Name]
+.molest [Name]
+.roast [Name]
+.compliment [Name]
+```
