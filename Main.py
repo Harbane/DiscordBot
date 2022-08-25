@@ -112,7 +112,13 @@ async def gay(ctx, name):
           if name == 'Harbane' or name == 'Haroon' or name == '@Harbane#6887' or name == 'Ahmad' or name == 'haroon' or name == 'harbane':
                     await ctx.reply('we have found that ' + name + ' is 100% gay and 100% gae')      
           else:
-                    await ctx.reply(f'We have found that {name} is {random.randint(0, 100)}% gay and {random.randint(0, 100)}% gae')
+                    await ctx.reply(f'We have found that {name} is {random.randint(0, 100)}% gay.')
+                  
+                     
+#------------------Gae Command------------------
+@bot.command()
+async def gae(ctx, name):
+      await ctx.reply(f'We have found that {name} is {random.randint(0, 100)}% gae')
 
 #------------------Quote Command------------------
 @bot.command()
@@ -184,6 +190,18 @@ async def moan(ctx):
 @bot.command()
 async def message(ctx, user:discord.User, *, message):
           await user.send(message)
+      
+   
+#-----------------Magic 8 ball Command------------------
+@bot.command()
+async def ball(ctx, *, question): #question is the argument
+        await ctx.reply(f'Your question is: {question}')
+        time.sleep(2)
+        await ctx.reply(f'hmm I am thinking..')
+        time.sleep(1)
+        await ctx.reply(random.choice(['It is certain', 'It is decidedly so', 'Without a doubt', 'Yes definitely', 'You may rely on it', 'As I see it, yes', 'Most likely', 'Yes', 'Signs point to yes', 'Concentrate and ask again', 'My reply is no', 'My sources say no', 'Very doubtful']))
+        
+            
 
 #------------------Join Voice Call------------------
 
@@ -205,6 +223,5 @@ async def leave(ctx):
                   await ctx.send("You are not in vc")
       else:
             await ctx.send("me no in vc, dum")
-      
 
 bot.run(getenv('TOKEN'))
